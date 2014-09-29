@@ -18,7 +18,7 @@
   <tbody>
     <% @pictures.each do |picture| %>
       <tr>
-        <td><%= image_tag picture.img_url, width: 200 %></td>
+        <td><%= image_tag picture.img.thumb.url %></td>
         <td><%= button_to "Delete", picture, method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete this picture?" %></td>
       </tr>
     <% end %>
